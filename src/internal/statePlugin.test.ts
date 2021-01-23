@@ -1,19 +1,20 @@
 import { badgePlugin, getMessages, log } from '1log';
-import { applyPipe, rootView, View } from 'antiutils';
-import { viewPlugin } from './viewPlugin';
+import { applyPipe, rootView } from 'antiutils';
 
 test('basic usage', () => {
   const view = applyPipe(
     rootView(42),
-    ({ get, set }): View<number, string> => ({
-      get: () => '0' + String(get()),
-      set: (value) => set(Number(value)),
+    ({ get, set }) => ({
+      get: Object.assign(() => '0' + String(get()), { a: 1 }),
+      set: Object.assign((value: string) => set(Number(value)), { b: 2 }),
+      c: 3,
     }),
-    log(badgePlugin('myView'))(viewPlugin),
+    log(badgePlugin('myView')),
   );
   expect(getMessages()).toMatchInlineSnapshot(`
     [myView] [create 1] +0ms
       Object {
+        "c": 3,
         "get": [Function],
         "set": [Function],
       }
@@ -27,5 +28,22 @@ test('basic usage', () => {
   expect(getMessages()).toMatchInlineSnapshot(`
     [myView] [create 1] [set] [call] +0ms "043"
     [myView] [create 1] [set] [return] +0ms 43
+  `);
+  expect(view).toMatchInlineSnapshot(`
+    Object {
+      "c": 3,
+      "get": [Function],
+      "set": [Function],
+    }
+  `);
+  expect({ ...view.get }).toMatchInlineSnapshot(`
+    Object {
+      "a": 1,
+    }
+  `);
+  expect({ ...view.set }).toMatchInlineSnapshot(`
+    Object {
+      "b": 2,
+    }
   `);
 });

@@ -7,6 +7,7 @@
     "node_modules",
     "build",
     "coverage",
+    "defaultConfig",
     "setupTests.ts",
     "babel.config.js"
   ],

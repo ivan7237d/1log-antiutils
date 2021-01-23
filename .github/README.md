@@ -4,13 +4,15 @@
 [![gzip size](https://badgen.net/bundlephobia/minzip/1log-antiutils?color=green)](https://bundlephobia.com/result?p=1log-antiutils)
 [![tree shaking](https://badgen.net/bundlephobia/tree-shaking/1log-antiutils)](https://bundlephobia.com/result?p=1log-antiutils)
 
-[1log](https://github.com/ivan7237d/1log) plugin for [Antiutils](https://github.com/ivan7237d/antiutils).
+Provides [1log](https://github.com/ivan7237d/1log) plugin `statePlugin` for logging [Antiutils](https://github.com/ivan7237d/antiutils) views.
 
 ## Installing
 
-1. Install [Antiutils](https://github.com/ivan7237d/antiutils) and [1log](https://github.com/ivan7237d/1log) if you haven't already.
+Assuming you have Antiutils installed,
 
-2. Install the NPM package:
+1. [Install `1log`](https://github.com/ivan7237d/1log#installing).
+
+2. Install the npm package:
 
    ```
    yarn add 1log-antiutils
@@ -22,9 +24,19 @@
    npm install 1log-antiutils --save
    ```
 
+3. Where you import `'1log/defaultConfig'` or `'1log/defaultJestConfig'`, also `import '1log-antiutils/defaultConfig'`, which runs `installPlugins(statePlugin)`.
+
 ## Usage
 
-TODO
+```ts
+import { log } from '1log';
+import { applyPipe, objectProp, rootView } from 'antiutils';
+
+const view = applyPipe(rootView({ a: 42 }), objectProp('a'), log);
+view.set(view.get() + 1);
+```
+
+<img src="https://github.com/ivan7237d/1log-antiutils/raw/master/images/view.png" alt="screenshot">
 
 ---
 

@@ -1,1 +1,1 @@
-export { viewPlugin } from './internal/viewPlugin';
+export { statePlugin } from './internal/statePlugin';
