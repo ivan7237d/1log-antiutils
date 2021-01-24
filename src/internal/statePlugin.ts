@@ -12,7 +12,7 @@ import {
 import { applyPipe } from 'antiutils';
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
-const isFunction = (value: any) => value.constructor === Function;
+const isFunction = (value: any) => value?.constructor === Function;
 
 const logFunction = (
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
