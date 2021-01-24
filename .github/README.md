@@ -10,7 +10,7 @@ Provides [1log](https://github.com/ivan7237d/1log) plugin `statePlugin` for logg
 
 Assuming you have Antiutils installed,
 
-1. [Install `1log`](https://github.com/ivan7237d/1log#installing).
+1. [Install 1log](https://github.com/ivan7237d/1log#installing).
 
 2. Install the npm package:
 
