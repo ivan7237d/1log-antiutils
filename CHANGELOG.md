@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.0.2](https://github.com/ivan7237d/1log-antiutils/compare/v2.0.1...v2.0.2) (2021-01-24)
+
+
+### Bug Fixes
+
+* correctly handle nullish get/set ([6ab6280](https://github.com/ivan7237d/1log-antiutils/commit/6ab62809c165354c72f96a9b61992dae0ac5fd44))
+
 ### [2.0.1](https://github.com/ivan7237d/1log-antiutils/compare/v2.0.0...v2.0.1) (2021-01-24)
 
 
