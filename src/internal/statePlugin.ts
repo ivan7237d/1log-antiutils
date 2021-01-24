@@ -44,8 +44,8 @@ export const statePlugin: ProxyPlugin = {
     value !== null &&
     value !== undefined &&
     value.constructor === Object &&
-    isFunction(value.get) &&
-    isFunction(value.set),
+    isFunction(value?.get) &&
+    isFunction(value?.set),
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   transform: (log) => ({ get, set, ...rest }: any): any => ({
     get: logFunction(get, { caption: 'get', color: logPalette.yellow }, log),
