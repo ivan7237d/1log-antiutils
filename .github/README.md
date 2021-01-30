@@ -36,7 +36,7 @@ const view = applyPipe(rootView({ a: 42 }), objectProp('a'), log);
 view.set(view.get() + 1);
 ```
 
-<img src="https://github.com/ivan7237d/1log-antiutils/raw/master/images/view.png" alt="screenshot">
+<img src="https://github.com/ivan7237d/1log-antiutils/raw/master/images/view-adjusted.png" alt="screenshot">
 
 ---
 
