@@ -8,7 +8,19 @@
   "sideEffects": false,
   "repository": "https://github.com/ivan7237d/1log-antiutils.git",
   "license": "MIT",
-  "keywords": [],
+  "keywords": [
+    "1log",
+    "plugin",
+    "antiutils",
+    "view",
+    "log",
+    "logger",
+    "logging",
+    "test",
+    "testing",
+    "jest",
+    "snapshot"
+  ],
   "scripts": {
     "prebuild": "rm -rf build",
     "build": "run-p build:*",
