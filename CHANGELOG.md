@@ -4,6 +4,8 @@ All notable changes to this project will be documented in this file. See [standa
 
 ### [2.0.4](https://github.com/ivan7237d/1log-antiutils/compare/v2.0.3...v2.0.4) (2021-02-07)
 
+Chore release.
+
 ### [2.0.3](https://github.com/ivan7237d/1log-antiutils/compare/v2.0.2...v2.0.3) (2021-02-06)
 
 Chore release.
