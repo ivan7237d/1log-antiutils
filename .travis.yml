@@ -4,3 +4,4 @@ node_js:
   - '15'
 script:
   - yarn run coveralls
+cache: yarn
