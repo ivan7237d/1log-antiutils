@@ -1,6 +1,6 @@
 <!-- README for NPM; the one for GitHub is in .github directory. -->
 
-<!-- 3 badges below are just to make NPM's scoring algorithm happy. -->
+<!-- The first 3 badges below are just to make NPM's scoring algorithm happy. -->
 
 [![npm version](https://img.shields.io/npm/v/1log-antiutils.svg?style=flat&color=brightgreen)](https://www.npmjs.com/package/1log-antiutils)
 [![license](https://img.shields.io/npm/l/1log-antiutils.svg?color=brightgreen)](https://www.npmjs.com/package/1log-antiutils)
