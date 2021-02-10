@@ -72,6 +72,13 @@
     "1log": "^2.0.0",
     "antiutils": "^3.0.2"
   },
+  "files": [
+    "build/main",
+    "build/module",
+    "defaultConfig",
+    "!**/*.test.*",
+    "!**/*.json"
+  ],
   "jest": {
     "roots": [
       "<rootDir>/src/"

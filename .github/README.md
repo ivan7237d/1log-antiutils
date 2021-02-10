@@ -5,7 +5,6 @@
 [![tree shaking](https://badgen.net/bundlephobia/tree-shaking/1log-antiutils?style=flat-square)](https://bundlephobia.com/result?p=1log-antiutils)
 [![types](https://img.shields.io/npm/types/1log-antiutils?color=brightgreen&style=flat-square)](https://www.npmjs.com/package/1log-antiutils)
 [![coverage status](https://img.shields.io/coveralls/github/ivan7237d/1log-antiutils/master.svg?style=flat-square)](https://coveralls.io/github/ivan7237d/1log-antiutils?branch=master)
-[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
 
 Provides [1log](https://github.com/ivan7237d/1log) plugin `statePlugin` for logging [Antiutils](https://github.com/ivan7237d/antiutils) views.
 
