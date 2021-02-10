@@ -2,23 +2,9 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
-### [2.0.6](https://github.com/ivan7237d/1log-antiutils/compare/v2.0.5...v2.0.6) (2021-02-10)
+### [2.0.3 - 2.0.6](https://github.com/ivan7237d/1log-antiutils/compare/v2.0.2...v2.0.6) (2021-02-10)
 
-Chore release.
-
-### [2.0.5](https://github.com/ivan7237d/1log-antiutils/compare/v2.0.4...v2.0.5) (2021-02-07)
-
-Chore release.
-
-### [2.0.4](https://github.com/ivan7237d/1log-antiutils/compare/v2.0.3...v2.0.4) (2021-02-07)
-
-Chore release.
-
-### [2.0.3](https://github.com/ivan7237d/1log-antiutils/compare/v2.0.2...v2.0.3) (2021-02-06)
-
-Chore release.
-
-### [2.0.2](https://github.com/ivan7237d/1log-antiutils/compare/v2.0.1...v2.0.2) (2021-01-24)
+Chore releases.
 
 ### Bug Fixes
 
