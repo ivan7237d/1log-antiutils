@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.1.0](https://github.com/ivan7237d/1log-antiutils/compare/v2.0.10...v2.1.0) (2021-03-05)
+
+
+### Features
+
+* support for 1log v3 ([0bfc9b1](https://github.com/ivan7237d/1log-antiutils/commit/0bfc9b151e0501ef442c1237dbebe98a48e37b53))
+
 ### [2.0.3 - 2.0.10](https://github.com/ivan7237d/1log-antiutils/compare/v2.0.2...v2.0.10) (2021-01-24 - 2021-02-10)
 
 Chore releases.
