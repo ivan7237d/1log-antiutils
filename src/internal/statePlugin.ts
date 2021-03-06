@@ -1,15 +1,15 @@
 import {
+  addNumberedBadge,
   excludeFromTimeDelta,
   includeInTimeDelta,
   increaseStackLevel,
-  LogBadge,
   logPalette,
   PluginLogger,
   pluginSymbol,
   PluginType,
   ProxyPlugin,
 } from '1log';
-import { applyPipe } from 'antiutils';
+import { pipe } from 'antiutils';
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 const isFunction = (value: any) => value?.constructor === Function;
@@ -17,18 +17,19 @@ const isFunction = (value: any) => value?.constructor === Function;
 const logFunction = (
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   originalFunction: any,
-  badge: LogBadge,
+  addBadge: (log: PluginLogger) => PluginLogger,
   log: PluginLogger,
 ) =>
   Object.assign(
     excludeFromTimeDelta((...args: unknown[]) => {
-      log([badge, { caption: 'call', color: logPalette.green }], ...args);
-      const result = applyPipe(
+      const logWithBadge = addBadge(log);
+      logWithBadge([], ...args);
+      const result = pipe(
         originalFunction,
         includeInTimeDelta,
         increaseStackLevel,
       )(...args);
-      log([badge, { caption: 'return', color: logPalette.purple }], result);
+      logWithBadge([{ caption: 'return', color: logPalette.purple }], result);
       return result;
     }),
     originalFunction,
@@ -44,12 +45,12 @@ export const statePlugin: ProxyPlugin = {
     value !== null &&
     value !== undefined &&
     value.constructor === Object &&
-    isFunction(value?.get) &&
-    isFunction(value?.set),
+    isFunction(value.get) &&
+    isFunction(value.set),
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   transform: (log) => ({ get, set, ...rest }: any): any => ({
-    get: logFunction(get, { caption: 'get', color: logPalette.yellow }, log),
-    set: logFunction(set, { caption: 'set', color: logPalette.orange }, log),
+    get: logFunction(get, addNumberedBadge('get', logPalette.yellow), log),
+    set: logFunction(set, addNumberedBadge('set', logPalette.orange), log),
     ...rest,
   }),
 };

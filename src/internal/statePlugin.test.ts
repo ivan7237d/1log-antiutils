@@ -1,8 +1,8 @@
 import { badgePlugin, getMessages, log } from '1log';
-import { applyPipe, rootView } from 'antiutils';
+import { pipe, rootView } from 'antiutils';
 
 test('basic usage', () => {
-  const view = applyPipe(
+  const view = pipe(
     rootView(42),
     ({ get, set }) => ({
       get: Object.assign(() => '0' + String(get()), { a: 1 }),
@@ -21,13 +21,23 @@ test('basic usage', () => {
   `);
   expect(view.get()).toMatchInlineSnapshot(`"042"`);
   expect(getMessages()).toMatchInlineSnapshot(`
-    [myView] [create 1] [get] [call] +0ms
-    [myView] [create 1] [get] [return] +0ms "042"
+    [myView] [create 1] [get 1] +0ms
+    [myView] [create 1] [get 1] [return] +0ms "042"
+  `);
+  expect(view.get()).toMatchInlineSnapshot(`"042"`);
+  expect(getMessages()).toMatchInlineSnapshot(`
+    [myView] [create 1] [get 2] +0ms
+    [myView] [create 1] [get 2] [return] +0ms "042"
   `);
   expect(view.set('043')).toMatchInlineSnapshot(`43`);
   expect(getMessages()).toMatchInlineSnapshot(`
-    [myView] [create 1] [set] [call] +0ms "043"
-    [myView] [create 1] [set] [return] +0ms 43
+    [myView] [create 1] [set 1] +0ms "043"
+    [myView] [create 1] [set 1] [return] +0ms 43
+  `);
+  expect(view.set('044')).toMatchInlineSnapshot(`44`);
+  expect(getMessages()).toMatchInlineSnapshot(`
+    [myView] [create 1] [set 2] +0ms "044"
+    [myView] [create 1] [set 2] [return] +0ms 44
   `);
   expect(view).toMatchInlineSnapshot(`
     Object {
@@ -45,5 +55,22 @@ test('basic usage', () => {
     Object {
       "b": 2,
     }
+  `);
+});
+
+test('correct handling on nullish values', () => {
+  log(undefined);
+  log(null);
+  log({});
+  log({ get: null, set: null });
+  expect(getMessages()).toMatchInlineSnapshot(`
+    +0ms undefined
+    +0ms null
+    +0ms Object {}
+    +0ms
+      Object {
+        "get": null,
+        "set": null,
+      }
   `);
 });

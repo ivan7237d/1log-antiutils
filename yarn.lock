@@ -1629,10 +1629,10 @@ ansi-styles@^4.0.0, ansi-styles@^4.1.0:
   dependencies:
     color-convert "^2.0.1"
 
-antiutils@3.0.4:
-  version "3.0.4"
-  resolved "https://registry.yarnpkg.com/antiutils/-/antiutils-3.0.4.tgz#619dd3fb0fed9cf7334e81b53db454ff952ec743"
-  integrity sha512-AuUbv2+tkoLDxiCyMZ62gwamc5UiAOQYPCRc3UGmHjR2KInu+gd/yOvs4Qh2LLwzyzh0zbKfXMKIhjEwniPJzQ==
+antiutils@3.1.0:
+  version "3.1.0"
+  resolved "https://registry.yarnpkg.com/antiutils/-/antiutils-3.1.0.tgz#2bc31913722ca9ffe22d006b1a5395294ea5013c"
+  integrity sha512-B0Le14U9Ho4uGVZ+hqYI/wOkdig7ee2e7A/0XK3EgikMDcb2kHiYdwBxKhp95gQftfwfJhCYVCoQjKYqXFL8og==
 
 antiutils@^3.0.0:
   version "3.0.2"

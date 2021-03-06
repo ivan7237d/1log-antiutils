@@ -51,7 +51,7 @@
     "@types/jest": "26.0.20",
     "@typescript-eslint/eslint-plugin": "4.15.0",
     "@typescript-eslint/parser": "4.15.0",
-    "antiutils": "3.0.4",
+    "antiutils": "3.1.0",
     "commitizen": "4.2.3",
     "coveralls": "3.1.0",
     "cz-conventional-changelog": "3.3.0",
@@ -70,7 +70,7 @@
   },
   "peerDependencies": {
     "1log": "^2.0.0 || ^3.0.0",
-    "antiutils": "^3.0.2"
+    "antiutils": "^3.1.0"
   },
   "files": [
     "build/main",
