@@ -32,9 +32,9 @@ Assuming you have Antiutils installed,
 
 ```ts
 import { log } from '1log';
-import { applyPipe, objectProp, rootView } from 'antiutils';
+import { pipe, objectProp, rootView } from 'antiutils';
 
-const view = applyPipe(rootView({ a: 42 }), objectProp('a'), log);
+const view = pipe(rootView({ a: 42 }), objectProp('a'), log);
 view.set(view.get() + 1);
 ```
 
