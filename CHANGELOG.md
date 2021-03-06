@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.0.0](https://github.com/ivan7237d/1log-antiutils/compare/v2.1.0...v3.0.0) (2021-03-06)
+
+
+### ⚠ BREAKING CHANGES
+
+* now that the badges are numbered, you may need to update Jest snapshots
+
+### Features
+
+* numbered badges ([be92dfd](https://github.com/ivan7237d/1log-antiutils/commit/be92dfda33a3e04efb327ccd884566838ee7c7dd))
+
 ## [2.1.0](https://github.com/ivan7237d/1log-antiutils/compare/v2.0.10...v2.1.0) (2021-03-05)
 
 

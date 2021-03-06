@@ -1,6 +1,6 @@
 {
   "name": "1log-antiutils",
-  "version": "2.1.0",
+  "version": "3.0.0",
   "description": "1log plugin for Antiutils",
   "main": "build/main/index.js",
   "typings": "build/main/index.d.ts",
